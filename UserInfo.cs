@@ -15,7 +15,10 @@ struct Worker
         get { return Id; }
         private set { Id = value; }
     }
-
+    /// <summary>
+    /// Метод вывода информации оработнике на экран
+    /// </summary>
+    /// <param name="path"> путь к файлу </param>
     public static void OutputInfoUser(string path = @"homework_7.txt")
     {
         string[] UserInfoId;
@@ -45,7 +48,10 @@ struct Worker
         }
 
     }
-    
+    /// <summary>
+    /// Метод удаления учетной записи
+    /// </summary>
+    /// <param name="path"> путь к файлу </param>
     public static void RemoveUser(string path = @"homework_7.txt")
     {
 
@@ -88,6 +94,10 @@ struct Worker
         File.Delete(path);
         File.WriteAllLines(path,NewArr);
     }
+    /// <summary>
+    /// Метод редактирования учетной записи
+    /// </summary>
+    /// <param name="path"> путь к файлу </param>
     public static void EditInfoUser(string path = @"homework_7.txt")
     {
         int NumId = 0, i = 0, y = 0;
@@ -127,6 +137,12 @@ struct Worker
         File.Delete(path);
         File.WriteAllLines(path, arr);
     }
+    /// <summary>
+    /// Метод создания учетной записи
+    /// </summary>
+    /// <param name="path"> путь к файлу </param>
+    /// <param name="setvalue">точное значение строки для замены </param>
+    /// <returns></returns>
     public static string CreatUser(string path = @"homework_7.txt",int setvalue = 0)
     {
         string WorkerInfo = String.Empty;
@@ -209,6 +225,9 @@ struct Worker
 }
 struct Cho
 {
+    /// <summary>
+    /// Метод выбора действия
+    /// </summary>
     public static void ice()
     {
         string CreatUs = "1 - Создание записи о работнике";
