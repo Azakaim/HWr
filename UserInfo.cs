@@ -374,8 +374,6 @@ struct Worker
                     DateTime.TryParse(str1, out maxDate);
                     if (minDate != DateTime.MinValue && maxDate != DateTime.MinValue)
                     {
-                        DateTime g = data.Min().Date;
-                        DateTime f = data.Max().Date;
                         if (minDate <= data.Min().Date && maxDate <= data.Max().Date)
                         {
                             for (int y = 0; y < Arr.Length; y++)
